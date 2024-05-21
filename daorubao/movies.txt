@@ -1,0 +1,2 @@
+"_id"	"currentState"	"describe"	"director"	"duration"	"filmTitle"	"isHot"	"issueDate"	"pictureUrl"	"recommend"	"score"	"tag"
+"664c19715857be88d40d1c3d"	"1"	"很好看"	"周星驰"	"127"	"星球崛起"	"false"	"2022年10月10日"	"http://localhost:3000/static/images/movies/t1.jpg"	"true"	"4"	"[ 1, 3 ]"
