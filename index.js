@@ -1,14 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-
+const md5 = require('md5')
+const { address, port, db } = require('./config/index')
 const router = require('./router/index')
 const MyUserModel = require('./db/users/index')
 
-mongoose.connect('mongodb://127.0.0.1:27017/db').then(async () => {
-  console.log('链接MongoDb db数据库成功')
-  const data = await MyUserModel.find()
-  console.log(data)
+mongoose.connect(`${address}:${port}/${db}`).then(async () => {
+  console.log('连接数据库')
 })
 
 //4. 设置回调

@@ -1,12 +1,9 @@
-const express=require("express")
-const router= express.Router()
+const express = require('express')
+const router = express.Router()
+const userLogin = require('./userSide/auth')
+const userFilmInfo = require('./filmInfo/index')
 
-router.get("/sss",(req,res)=>{
-  res.send("6666")
-})
+router.use('/', userLogin)
+router.use('/', userFilmInfo)
 
-
-
-
-module.exports= router
-
+module.exports = router
