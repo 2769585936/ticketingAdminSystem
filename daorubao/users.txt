@@ -1,2 +1,0 @@
-"_id"	"__v"	"name"	"password"	"phone"	"userPicture"
-"664bf30714352ec40e7bea45"	"0"	"yzx"	"25d55ad283aa400af464c76d713c07ad"	"17720349026"	
