@@ -6,10 +6,8 @@ const userCollected = new Schema({
   name: String,
   phone: Number,
   userPicture: String,
-  password:{type:String}
+  password: String
 })
-
-
 
 const MyUserModel = mongoose.model('users', userCollected)
 

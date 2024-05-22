@@ -2,13 +2,15 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const recommendCollected = new Schema({
+const moviesCollected = new Schema({
   filmTitle: String,
   pictureUrl: String,
   score: Number,
-  describe: String
+  describe: String,
+  recommend: Boolean,
+  isHot: Boolean
 })
 
-const MyRecommendModel = mongoose.model('recommends', recommendCollected)
+const MyMoviesModel = mongoose.model('movies', moviesCollected)
 
-module.exports = { MyRecommendModel }
+module.exports = { MyMoviesModel }

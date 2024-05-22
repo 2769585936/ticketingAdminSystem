@@ -6,7 +6,9 @@ const jwt = require('jsonwebtoken')
 
 userLogin.post('/login', async (req, res) => {
   const { phone, password } = req.body
+  console.log(phone, password)
   const data = await MyUserModel.findOne({ phone, password })
+  console.log(data)
   if (!data) {
     return res.send({
       code: '0001',
