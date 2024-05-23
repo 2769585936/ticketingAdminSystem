@@ -30,7 +30,6 @@ cinemasRouter.get('/cinemas', async (req, res) => {
 
 // 根据_id 获取信息
 cinemasRouter.get('/cinemasid', async (req, res) => {
-  // 这个id是电影ID 根据电影获取影城
   const { _id } = req.query
 
   let data

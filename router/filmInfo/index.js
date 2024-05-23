@@ -34,5 +34,14 @@ userFilmInfo.get('/preSale', async (req, res) => {
     msg: 'ok'
   })
 })
+userFilmInfo.get('/movieInfo', async (req, res) => {
+  const { _id } = req.query
+  const data = await MyMoviesModel.find({ _id })
+  res.send({
+    code: '0000',
+    data: data,
+    msg: 'ok'
+  })
+})
 
 module.exports = userFilmInfo
