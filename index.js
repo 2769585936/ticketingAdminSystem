@@ -39,6 +39,8 @@ app.use(cors())
 
 app.use('/static/images', express.static('images'))
 app.use('/api', router)
+
+// 测试接口
 app.get('/app', (req, res) => {
   res.send('9898')
 })

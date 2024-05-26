@@ -3,6 +3,7 @@ db.getCollection("filmsessions").insert( {
     _fid: ObjectId("664c650513f012a7bf043174"),
     _id: ObjectId("664cba3213f012a7bf043195"),
     hall: 0,
+    price: 40,
     seat: [
         [
             {
@@ -23,7 +24,104 @@ db.getCollection("filmsessions").insert( {
             {
                 isHide: false,
                 isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
                 isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            }
+        ],
+        [
+            {
+                isHide: true,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
             },
             {
                 isHide: false,
@@ -58,7 +156,24 @@ db.getCollection("filmsessions").insert( {
             {
                 isHide: false,
                 isCan: true,
-                isSelected: false
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            }
+        ],
+        [
+            {
+                isHide: true,
+                isCan: true,
+                isSelected: true
             },
             {
                 isHide: false,
@@ -84,6 +199,220 @@ db.getCollection("filmsessions").insert( {
                 isHide: false,
                 isCan: true,
                 isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            }
+        ],
+        [
+            {
+                isHide: true,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            }
+        ],
+        [
+            {
+                isHide: true,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
             }
         ],
         [
@@ -160,340 +489,12 @@ db.getCollection("filmsessions").insert( {
             {
                 isHide: false,
                 isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            }
-        ],
-        [
-            {
-                isHide: true,
-                isCan: true,
-                isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            }
-        ],
-        [
-            {
-                isHide: true,
-                isCan: true,
-                isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            }
-        ],
-        [
-            {
-                isHide: true,
-                isCan: true,
-                isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
                 isSelected: true
             },
             {
                 isHide: false,
                 isCan: true,
                 isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            }
-        ],
-        [
-            {
-                isHide: true,
-                isCan: true,
-                isSelected: true
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
             }
         ],
         [
@@ -575,12 +576,181 @@ db.getCollection("filmsessions").insert( {
             {
                 isHide: false,
                 isCan: true,
-                isSelected: false
+                isSelected: true
             }
         ],
         [
             {
                 isHide: true,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            }
+        ],
+        [
+            {
+                isHide: true,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: true
+            }
+        ],
+        [
+            {
+                isHide: false,
+                isCan: true,
+                isSelected: false
+            },
+            {
+                isHide: false,
                 isCan: true,
                 isSelected: true
             },
@@ -642,28 +812,6 @@ db.getCollection("filmsessions").insert( {
             {
                 isHide: false,
                 isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            }
-        ],
-        [
-            {
-                isHide: true,
-                isCan: true,
                 isSelected: true
             },
             {
@@ -674,154 +822,7 @@ db.getCollection("filmsessions").insert( {
             {
                 isHide: false,
                 isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            }
-        ],
-        [
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
-            },
-            {
-                isHide: false,
-                isCan: true,
-                isSelected: false
+                isSelected: true
             }
         ]
     ],

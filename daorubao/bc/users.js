@@ -4,5 +4,5 @@ db.getCollection("users").insert( {
     name: "yzx",
     password: "25d55ad283aa400af464c76d713c07ad",
     phone: 17720349026,
-    userPicture: null
+    userPicture: "http://localhost:3000/static/images/user1.jpg"
 } );
