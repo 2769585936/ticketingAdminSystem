@@ -9,13 +9,21 @@ cinemasRouter.get('/cinemas', async (req, res) => {
   let data
   if (id) {
     data = await MyFilmSessionsModel.find({ _fid: id }).populate('_cid').select({ _fid: 1 })
-    data = data.map(item => {
-      return {
-        _cid: item._cid[0],
-        _fid: item._fid,
-        _id: item._id
+
+    // 去重
+    const uniqueCinemas = new Set()
+    data = data.reduce((acc, item) => {
+      if (!uniqueCinemas.has(item._cid[0]._id)) {
+        uniqueCinemas.add(item._cid[0]._id)
+        acc.push({
+          _cid: item._cid[0],
+          _fid: item._fid,
+          _id: item._id
+        })
       }
-    })
+      return acc
+    }, [])
+
     console.log(data)
   } else {
     data = await MyCinemasModel.find()
@@ -31,7 +39,6 @@ cinemasRouter.get('/cinemas', async (req, res) => {
 // 根据_id 获取信息
 cinemasRouter.get('/cinemasid', async (req, res) => {
   const { _id } = req.query
-
   let data
   if (_id) {
     data = await MyFilmSessionsModel.find({ _id }).populate(['_cid', '_fid'])

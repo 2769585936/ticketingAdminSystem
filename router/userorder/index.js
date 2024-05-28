@@ -66,6 +66,14 @@ createOrderRouter.get('/userorders', async (req, res) => {
     case 'id':
       obj._id = _id
       break
+    case 'unpai':
+      obj._userid = userid
+      obj.currentOrderState = 2
+      break
+    case 'pai':
+      obj._userid = userid
+      obj.currentOrderState = 1
+      break
   }
 
   let data = await userOrderModel.find(obj).sort({ orderStartTime: -1 })
@@ -82,7 +90,7 @@ createOrderRouter.get('/userorders', async (req, res) => {
 })
 
 createOrderRouter.delete('/deleteuserOrder', async (req, res) => {
-  const { _id } = req.query
+  const { _id } = req.query 
   const data = await userOrderModel.deleteOne({ _id })
   return res.send({
     code: '0000',
@@ -90,5 +98,4 @@ createOrderRouter.delete('/deleteuserOrder', async (req, res) => {
     msg: 'ok'
   })
 })
-
 module.exports = createOrderRouter
