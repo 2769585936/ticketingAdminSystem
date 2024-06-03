@@ -14,9 +14,9 @@ userFilmInfo.get('/recommend', async (req, res) => {
 
 // 热售
 userFilmInfo.get('/hotSale', async (req, res) => {
-  const { limit } = req.query
-  const data = await MyMoviesModel.find({ isHot: true }).limit(limit)
-  // console.log(data)
+  const { limit, length = 0 } = req.query
+  console.log(length)
+  const data = await MyMoviesModel.find({ isHot: true }).skip(length).limit(limit)
   res.send({
     code: '0000',
     data: data,
@@ -24,10 +24,10 @@ userFilmInfo.get('/hotSale', async (req, res) => {
   })
 })
 
-// 热售
+// 预售
 userFilmInfo.get('/preSale', async (req, res) => {
-  const { limit } = req.query
-  const data = await MyMoviesModel.find({ isPre: true }).limit(limit)
+  const { limit, length = 0 } = req.query
+  const data = await MyMoviesModel.find({ isPre: true }).skip(length).limit(limit)
   res.send({
     code: '0000',
     data: data,

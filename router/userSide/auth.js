@@ -6,11 +6,9 @@ const jwt = require('jsonwebtoken')
 
 userLogin.post('/login', async (req, res) => {
   const { phone, password } = req.body
-  console.log(phone, password)
   const data = await MyUserModel.findOne({ phone, password }).select({
     password: 0
   })
-  console.log(data)
   if (!data) {
     return res.send({
       code: '0001',
@@ -26,7 +24,7 @@ userLogin.post('/login', async (req, res) => {
     },
     signature,
     {
-      expiresIn: '7 days'
+      expiresIn: '7days'
     }
   )
   return res.send({
