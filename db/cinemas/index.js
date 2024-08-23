@@ -3,9 +3,11 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const cinemaCollected = new Schema({
+  _id: mongoose.Types.ObjectId,
   cinemaName: String,
   address: String,
-  pictureUrl: String
+  pictureUrl: String,
+  hall: Array
 })
 
 const MyCinemasModel = mongoose.model('cinemas', cinemaCollected)

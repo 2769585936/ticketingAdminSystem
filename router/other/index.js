@@ -7,8 +7,7 @@ otherRouter.get('/tags', async (req, res) => {
   const data = await tagsModel.find()
   return res.send({
     code: '0000',
-    data: data,
-    msg: 'ok'
+    data: data
   })
 })
 

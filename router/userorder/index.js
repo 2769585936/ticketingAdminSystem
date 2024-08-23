@@ -3,6 +3,8 @@ const express = require('express')
 const { userOrderModel } = require('../../db/userorder/index')
 const { MyFilmSessionsModel } = require('../../db/cinemas')
 const { MyMoviesModel } = require('../../db/filmInfo')
+const { errorSend, successSend } = require('../../utils')
+const { default: mongoose } = require('mongoose')
 const createOrderRouter = express.Router()
 
 createOrderRouter.post('/createUserOrder', async (req, res) => {
@@ -10,8 +12,7 @@ createOrderRouter.post('/createUserOrder', async (req, res) => {
   const data = await userOrderModel.create(body)
   return res.send({
     code: '0000',
-    data: data,
-    msg: 'ok'
+    data: data
   })
 })
 
@@ -20,14 +21,12 @@ createOrderRouter.get('/userorder', async (req, res) => {
   const data = await userOrderModel.find({ _id })
   return res.send({
     code: '0000',
-    data: data[0],
-    msg: 'ok'
+    data: data[0]
   })
 })
 
 createOrderRouter.post('/updateuserorder', async (req, res) => {
   const { _id, currentOrderState } = req.body
-
   let data = null
   try {
     if (currentOrderState == 1) {
@@ -42,14 +41,12 @@ createOrderRouter.post('/updateuserorder', async (req, res) => {
     }
     return res.send({
       code: '0000',
-      data: data,
-      msg: 'ok'
+      data: data
     })
   } catch (e) {
-    return res.send({
+    errorSend(res, {
       code: '0001',
-      data: data,
-      msg: '数据错误'
+      message: '数据错误'
     })
   }
 })
@@ -77,25 +74,61 @@ createOrderRouter.get('/userorders', async (req, res) => {
   }
 
   let data = await userOrderModel.find(obj).sort({ orderStartTime: -1 })
-  const k = {}
   for (const item of data) {
     item.movies = await MyFilmSessionsModel.find({ _id: item._changciid }).populate(['_cid', '_fid'])
   }
 
   return res.send({
     code: '0000',
-    data: data,
-    msg: 'ok'
+    data: data
   })
 })
 
 createOrderRouter.delete('/deleteuserOrder', async (req, res) => {
-  const { _id } = req.query 
+  const { _id } = req.query
   const data = await userOrderModel.deleteOne({ _id })
-  return res.send({
+  return successSend(res, {
     code: '0000',
     data: data,
-    msg: 'ok'
+    message: '删除成功'
   })
 })
+
+createOrderRouter.get('/orders', async (req, res) => {
+  try {
+    const { id, state } = req.query
+    let reqObj = {},
+      data,
+      $or = []
+    if (id != null) {
+      if (!mongoose.isValidObjectId(id)) {
+        return errorSend(res, {
+          code: '0007',
+          message: 'id 格式不正确'
+        })
+      }
+      $or.push({ _id: id })
+      $or.push({ _userid: [id] })
+      reqObj.$or = $or
+    }
+    if (state != null && state != '0') {
+      reqObj.currentOrderState = state
+    }
+    data = await orderFind(reqObj)
+    return res.send({
+      code: '0000',
+      data: data
+    })
+  } catch (e) {
+    errorSend(res, {
+      code: '0008',
+      message: '请求错误'
+    })
+  }
+})
+
+async function orderFind(val) {
+  return userOrderModel.find(val)
+}
+
 module.exports = createOrderRouter

@@ -5,6 +5,7 @@ const userFilmInfo = require('./filmInfo/index')
 const otherRouter = require('./other/index')
 const cinemasRouter = require('./cinemas/index')
 const createOrderRouter = require('./userorder/index')
+const { tokenVerify } = require('../utils/tokenVerify')
 
 // 登录路由
 router.use('/', userLogin)
@@ -12,11 +13,10 @@ router.use('/', userLogin)
 router.use('/', userFilmInfo)
 // 其他接口路由
 router.use('/', otherRouter)
-
 // 影院
 router.use('/', cinemasRouter)
 
 // 创建订单
-router.use('/', createOrderRouter)
+router.use('/', tokenVerify, createOrderRouter)
 
 module.exports = router

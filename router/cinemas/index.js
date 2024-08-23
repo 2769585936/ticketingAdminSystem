@@ -1,15 +1,15 @@
 const express = require('express')
 const { MyCinemasModel, MyFilmSessionsModel } = require('../../db/cinemas/index')
+const { default: mongoose } = require('mongoose')
+const { successSend } = require('../../utils')
 const cinemasRouter = express.Router()
 
 cinemasRouter.get('/cinemas', async (req, res) => {
   // 这个id是电影ID 根据电影获取影城
-  const { id } = req.query
-  console.log(id)
+  const { id, cinemaName } = req.query
   let data
   if (id) {
     data = await MyFilmSessionsModel.find({ _fid: id }).populate('_cid').select({ _fid: 1 })
-
     // 去重
     const uniqueCinemas = new Set()
     data = data.reduce((acc, item) => {
@@ -23,16 +23,20 @@ cinemasRouter.get('/cinemas', async (req, res) => {
       }
       return acc
     }, [])
-
-    console.log(data)
+  } else if (cinemaName) {
+    // 影城名模查询
+    const $or = [{ cinemaName }]
+    mongoose.isValidObjectId(cinemaName) && $or.push({ _id: cinemaName })
+    data = await MyCinemasModel.find({
+      $or
+    })
   } else {
     data = await MyCinemasModel.find()
   }
 
   return res.send({
     code: '0000',
-    data: data,
-    msg: 'ok'
+    data: data
   })
 })
 
@@ -48,8 +52,7 @@ cinemasRouter.get('/cinemasid', async (req, res) => {
 
   return res.send({
     code: '0000',
-    data: data,
-    msg: 'ok'
+    data: data
   })
 })
 // 获取根据_fid 和_cid 获取有几个场次
@@ -65,15 +68,53 @@ cinemasRouter.get('/cinemasTime', async (req, res) => {
     //     _id: item._id
     //   }
     // })
-    console.log(data)
   } else {
     data = await MyCinemasModel.find()
   }
 
   return res.send({
     code: '0000',
-    data: data,
-    msg: 'ok'
+    data: data
+  })
+})
+
+// cinema
+cinemasRouter.post('/update/cinema', async (req, res) => {
+  const { _id, address, cinemaName } = req.body
+  let reqObj = {},
+    data
+
+  if (address) reqObj.address = address
+  if (cinemaName) reqObj.cinemaName = cinemaName
+  data = await MyCinemasModel.findByIdAndUpdate(_id, reqObj)
+  successSend(res, {
+    data,
+    message: '修改成功'
+  })
+})
+
+cinemasRouter.post('/delete/cinema', async (req, res) => {
+  const { _id } = req.body
+  const data = await MyCinemasModel.deleteOne({
+    _id
+  })
+  successSend(res, {
+    data,
+    message: '删除成功'
+  })
+})
+cinemasRouter.post('/add/cinema', async (req, res) => {
+  const { cinemaName, address, pictureUrl, hall } = req.body
+  let reqObj = {},
+    data
+  if (cinemaName) reqObj.cinemaName = cinemaName
+  if (address) reqObj.address = address
+  if (pictureUrl) reqObj.pictureUrl = pictureUrl
+  if (!hall) reqObj.hall = ['A厅', 'B厅', 'C厅']
+  data = await MyCinemasModel.insertMany(reqObj)
+  successSend(res, {
+    data,
+    message: '添加成功'
   })
 })
 

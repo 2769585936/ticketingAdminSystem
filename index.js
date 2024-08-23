@@ -1,4 +1,6 @@
 const express = require('express')
+const fileupload = require('express-fileupload')
+
 const cors = require('cors')
 const mongoose = require('mongoose')
 const md5 = require('md5')
@@ -9,7 +11,6 @@ const MyUserModel = require('./db/users/index')
 mongoose.connect(`${address}:${port}/${db}`).then(async () => {
   console.log('连接数据库')
 })
-
 //4. 设置回调
 // 设置连接成功的回调  once 一次   事件回调函数只执行一次
 mongoose.connection.once('open', () => {
@@ -33,7 +34,7 @@ const app = express()
 app.use(express.json())
 
 app.use(express.urlencoded({ extended: false }))
-
+app.use(fileupload())
 // 配置跨域
 app.use(cors())
 
